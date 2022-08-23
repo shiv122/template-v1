@@ -1,0 +1,67 @@
+@import "./base/bootstrap-extended/include"; // Bootstrap includes
+@import "./base/components/include"; // Components includes
+
+// --- file input button for dark layout ----- //
+.dark-layout {
+  .form-control {
+    &[type="file"] {
+      &::file-selector-button {
+        background-color: $theme-dark-input-bg;
+      }
+    }
+  }
+}
+
+.main-menu .navbar-header .navbar-brand .brand-text {
+  font-size: 1.1rem !important;
+}
+
+.dark-layout {
+  .table-hover > tbody > tr:hover > * {
+    --bs-table-accent-bg: #161d31;
+  }
+  .dataTables_wrapper {
+    .dropdown-toggle {
+      background: #343d55 !important;
+      border: none;
+      color: #b4b7bd !important;
+    }
+    .form-control:disabled,
+    .form-control[readonly] {
+      background-color: unset !important;
+    }
+  }
+  .flatpickr-calendar {
+    background: #161d31;
+    border-color: #161d31;
+    color: #b4b7bd;
+    box-shadow: none;
+
+    .flatpickr-day,
+    span.flatpickr-weekday {
+      color: #b4b7bd;
+    }
+  }
+  .table tfoot tr th {
+    color: #b4b7bd !important;
+  }
+  th {
+    color: #b4b7bd !important;
+  }
+}
+.nav-link.dropdown-toggle {
+  background: unset !important;
+  color: unset !important;
+}
+
+.dt--top-section {
+  padding: 0 20px;
+}
+table.dataTable td,
+table.dataTable th {
+  font-weight: 500 !important;
+}
+.badge i,
+.badge svg {
+  width: 8px !important;
+}
