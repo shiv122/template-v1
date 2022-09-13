@@ -7,8 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::prefix('admin')
-    ->name('admin.')
+Route::name('admin.')
     ->middleware(
         [
             'auth',
@@ -36,5 +35,8 @@ Route::prefix('admin')
             ->controller(ProductController::class)
             ->group(function () {
                 Route::get('/', 'index')->name('index');
+                Route::post('/', 'store')->name('store');
+                Route::get('edit', 'edit')->name('edit');
+                Route::post('update/', 'update')->name('update');
             });
     });
